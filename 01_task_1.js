@@ -1,5 +1,5 @@
 var price=900
-var product="wheat"
+var product="Wheat"
 var tax=90
 console.log(product)
 var total=price+tax

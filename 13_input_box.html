@@ -1,6 +1,22 @@
 <!--Input Box-->
 <input id="inputbox">
 <button onclick="addItem()">Add</button>
+<ul id="para">
+    <li>Hii</li>
+</ul>
+<!--p id="para">Hello</p-->
 <script>
-    
+    //selecting input box
+    var inputbox=document.getElementById("inputbox")
+    //selecting para tag
+    var para=document.getElementById("para")
+
+    function addItem()
+    {
+        //Creating li tag
+        var listitem=document.createElement("li")
+        //inserting value into li tag
+        listitem.textContent=inputbox.value
+        para.append(listitem)
+    }
 </script>

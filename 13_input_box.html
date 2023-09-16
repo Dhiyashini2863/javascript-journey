@@ -2,21 +2,25 @@
 <input id="inputbox">
 <button onclick="addItem()">Add</button>
 <ul id="para">
-    <li>Hii</li>
+    <li>Hii
+        <button onclick="deleteItem(event)">Delete</button>
+    </li>
 </ul>
 <!--p id="para">Hello</p-->
 <script>
     //selecting input box
-    var inputbox=document.getElementById("inputbox")
+    var inputbox = document.getElementById("inputbox")
     //selecting para tag
-    var para=document.getElementById("para")
+    var para = document.getElementById("para")
 
-    function addItem()
-    {
+    function addItem() {
         //Creating li tag
-        var listitem=document.createElement("li")
+        var listitem = document.createElement("li")
         //inserting value into li tag
-        listitem.textContent=inputbox.value
+        listitem.textContent = inputbox.value
         para.append(listitem)
+    }
+    function deleteItem() {
+        event.target.remove()
     }
 </script>
